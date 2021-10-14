@@ -348,7 +348,7 @@ int ClientesConMasPedidosPendientes(eCliente losClientes[] , ePedido losPedidos[
 			losClientes[j].contador=auxiliar;
 		}
 	}
-
+	printf("ordenamiento%d", losClientes[i].contador);
  }
 
 }

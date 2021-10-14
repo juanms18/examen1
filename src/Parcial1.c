@@ -177,10 +177,15 @@ int main(void)
 
 			break;
 		case 10:
-			promedio = CantidadKilosPPPromedioPorCliente(listaClientes, losPedidos, CANTIDADDECLIENTES , CANTIDADDEPEDIDOS);
+			/*promedio = CantidadKilosPPPromedioPorCliente(listaClientes, losPedidos, CANTIDADDECLIENTES , CANTIDADDEPEDIDOS);
 			printf("El promedio de kilos reciclados de pp por cliente es %.2f kg por cliente.\n" ,promedio);
-			system("pause");
+			system("pause");*/
+			ClientesConMasPedidosPendientes(listaClientes , losPedidos, CANTIDADDECLIENTES , CANTIDADDEPEDIDOS);
 			break;
+
+
+
+
 
 		}
 
