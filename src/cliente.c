@@ -15,7 +15,7 @@ eCliente IngresarUnCliente()
 	getString(cliente.nombre, "Ingrese el nombre del cliente:\n" , "Nombre demasiado largo.Vuelva a intentar:\n", 50);
 	IngresarCuit(cliente.cuit , 3);
 	getString(cliente.direccion, "Ingrese direccion del cliente:\n" , "Direccion demasiado larga.Vuelva a intentar:\n \n", 50);
-	getString(cliente.localidad, "Ingrese la localidad:\n" , "Localidad demasiado larga.Vuelva a intentar:\n", 50);
+	getString(cliente.Localidad.localidad, "Ingrese la localidad:\n" , "Localidad demasiado larga.Vuelva a intentar:\n", 50);
 	cliente.isEmpty=FULL;
 
 	return cliente;
@@ -80,7 +80,7 @@ int MostrarListadoClientes (eCliente listaClientes[], int tam)
 
 void MostrarCliente (eCliente unCliente)
 {
-  printf ("%-39s %-15s %-31s %-24s %-1d\n", unCliente.nombre, unCliente.cuit, unCliente.direccion,  unCliente.localidad , unCliente.idCliente);
+  printf ("%-39s %-15s %-31s %-24s %-1d\n", unCliente.nombre, unCliente.cuit, unCliente.direccion,  unCliente.Localidad.localidad , unCliente.idCliente);
 
 }
 
@@ -101,7 +101,7 @@ int ModificarDatosCliente(eCliente listaClientes[] , int tam)
 		 if(listaClientes[i].isEmpty == FULL && listaClientes[i].idCliente == clienteAModificar && clienteValido == 0)
 		 {
 			 getString(listaClientes[i].direccion, "Ingrese la nueva direecion:\n" , "Direccion erronea.Vuelva a intentar:\n", 50);
-			 getString(listaClientes[i].localidad, "Ingrese la nueva localidad:\n" , "Localidad incorrecta. Vuelva a intentar:\n", 50);
+			 getString(listaClientes[i].Localidad.localidad, "Ingrese la nueva localidad:\n" , "Localidad incorrecta. Vuelva a intentar:\n", 50);
 			 retorno = 1;
 			 break;
 		 }

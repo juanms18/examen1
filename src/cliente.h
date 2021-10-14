@@ -19,13 +19,21 @@
 #define EMPTY 0
 #define CANTIDADDECLIENTES 4
 #define CANTIDADDEPEDIDOS 5
+
+typedef struct
+{
+	char localidad[50];
+}eLocalidad;
+
+
+
 typedef struct
 {
   int idCliente; //PK
   char nombre[50];
   char cuit[12];
   char direccion[50];
-  char localidad[50];
+  eLocalidad Localidad;
   int idPedido;//FK
   int isEmpty;
 

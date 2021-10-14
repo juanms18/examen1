@@ -166,7 +166,7 @@ int MostrarListadoClientesConPedidos (ePedido elPedido[] , eCliente elCliente[] 
 
            if(elCliente[i].idCliente==elPedido[j].idCliente && elPedido[j].estado==EMPTY)
            {
-        	   //MostrarClienteEstado(elCliente[i]);
+
         	   MostrarPedidoEstado (elPedido[j]);
 
            }
@@ -189,7 +189,7 @@ void MostrarPedidoEstado (ePedido unPedido)
 
 void MostrarClienteEstado (eCliente unCliente)
 {
-  printf ("%-39s %-15s %-31s %-24s  %d\n", unCliente.nombre, unCliente.cuit, unCliente.direccion,  unCliente.localidad , unCliente.idCliente);
+  printf ("%-39s %-15s %-31s %-24s  %d\n", unCliente.nombre, unCliente.cuit, unCliente.direccion,  unCliente.Localidad.localidad , unCliente.idCliente);
 
 }
 
@@ -282,8 +282,8 @@ int CantidadDePedidosPorLocalidad(ePedido elPedido[] , eCliente elCliente[] , in
  for(i=0 ; i<tamCliente ; i++)
  {
 	 strupr(localidad);
-	 strupr(elCliente[i].localidad);
-	 if(strcmp(elCliente[i].localidad,localidad)==0)
+	 strupr(elCliente[i].Localidad.localidad);
+	 if(strcmp(elCliente[i].Localidad.localidad,localidad)==0)
 	 {
 			 for(j=0; j<tamPedido; j++)
 		 {
