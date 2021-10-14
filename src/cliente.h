@@ -36,6 +36,7 @@ typedef struct
   eLocalidad Localidad;
   int idPedido;//FK
   int isEmpty;
+  int contador;
 
 } eCliente;
 

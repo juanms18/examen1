@@ -328,3 +328,47 @@ float CantidadKilosPPPromedioPorCliente(eCliente losClientes[], ePedido losPedid
 
 }
 
+int ClientesConMasPedidosPendientes(eCliente losClientes[] , ePedido losPedidos[], int tamClientes , int tamPedidos)
+{
+ int i;
+ int j;
+ int k;
+ int auxiliar;
+
+ CantidadPedidosPendientesPorCLiente(losClientes, losPedidos , tamClientes ,  tamPedidos);
+
+ for(i=0; i<tamClientes; i++)
+ {
+	for(j=i+1; j<losClientes;j++)
+	{
+		if(losClientes[i].contador>losClientes[j].contador)
+		{
+			auxiliar = losClientes[i].contador;
+			losClientes[i].contador=losClientes[j].contador;
+			losClientes[j].contador=auxiliar;
+		}
+	}
+
+ }
+
+}
+
+
+void CantidadPedidosPendientesPorCLiente(eCliente losClientes[] , ePedido losPedidos[], int tamClientes , int tamPedidos)
+{
+int i;
+int j;
+
+for(i=0;i<tamClientes;i++)
+{
+	for(j=0;j<tamPedidos;j++)
+	{
+		if(losPedidos[j].estado==EMPTY)
+		{
+			losClientes[i].contador =  losClientes[i].contador+1;
+		}
+
+	}
+}
+
+}

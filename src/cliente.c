@@ -45,6 +45,7 @@ void InicializarIdYListaClientes (eCliente listaClientes[], int tam)
     {
       listaClientes[i].isEmpty = EMPTY;
       listaClientes[i].idCliente = EMPTY;
+      listaClientes[i].contador = EMPTY;
     }
 }
 
