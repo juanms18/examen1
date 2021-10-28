@@ -331,26 +331,24 @@ float CantidadKilosPPPromedioPorCliente(eCliente losClientes[], ePedido losPedid
 int ClientesConMasPedidosPendientes(eCliente losClientes[] , ePedido losPedidos[], int tamClientes , int tamPedidos)
 {
  int i;
- int j;
- int k;
- int auxiliar;
+ int retorno;
+ int flag=0;
+ int max;
 
  CantidadPedidosPendientesPorCLiente(losClientes, losPedidos , tamClientes ,  tamPedidos);
 
  for(i=0; i<tamClientes; i++)
  {
-	for(j=i+1; j<losClientes;j++)
+	if(flag == 0 && losClientes[i].contador>max)
 	{
-		if(losClientes[i].contador>losClientes[j].contador)
-		{
-			auxiliar = losClientes[i].contador;
-			losClientes[i].contador=losClientes[j].contador;
-			losClientes[j].contador=auxiliar;
-		}
-	}
-	printf("ordenamiento%d", losClientes[i].contador);
- }
+		max=losClientes[i].contador;
 
+		flag=1;
+	}
+
+
+ }
+return max;
 }
 
 

@@ -30,7 +30,7 @@ int main(void)
 		eCliente listaClientes[CANTIDADDECLIENTES] =
 		{
 				{1,"jose","30707857478","elizalde 506" ,"caba" ,1,FULL},
-				{2,"juan","30707857478","corrientes 506" ,"caba" ,0,FULL},
+				{2,"juan","30707857478","corrientes 506" ,"caba" ,1,FULL},
 				{3,"lucas","30707857478","pasco 1276" ,"CABA" ,1,FULL}//,
 				//{4,"dsadjose","30707857478","elizdasdalde 506" ,"las" ,1,FULL}
 		};
